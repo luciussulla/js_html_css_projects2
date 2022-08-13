@@ -139,3 +139,72 @@ body {
   transform-origin: left top; 
   border-radius: 0 50% 50% 0;
 }
+
+.frame-1 {
+  width: 32rem; 
+  height: 3.5rem; 
+  background-color: #000;
+  top: 25rem; 
+  left: 26rem; 
+  transform: rotateZ(45deg); 
+  transform-origin: left top; 
+  border-radius: 0 50% 50% 0; 
+}
+
+.frame-2 {
+  width: 25rem; 
+  height: 2rem; 
+  background-color: #000;
+  top: 44rem; 
+  left: 45rem; 
+  z-index: 10; 
+}
+
+.seat-tube {
+  width: 3rem; 
+  height: 18.5rem; 
+  background-color: #000;
+  top: 30rem; 
+  left: 47rem; 
+  transform: rotateZ(15deg);
+}
+
+.seat-tube::before {
+  content: ""; 
+  width: 2rem; 
+  height: 11rem; 
+  position: absolute; 
+  background-color: #000; 
+  top: -11rem; 
+  left: .5rem; 
+}
+
+.seat-tube::after {
+  content: ""; 
+  width: 2.5rem; 
+  height: 1.5rem; 
+  position: absolute; 
+  background-color: #000; 
+  top: -3rem; 
+  left: .25rem; 
+}
+
+.seat {
+  width: 12rem; 
+  height: 3rem; 
+  background-color: #000;
+  top: -12rem; 
+  left: -6rem; 
+  transform: rotateZ(-12deg); 
+  border-radius: 20% 1rem 1rem 80%;
+}
+
+.back-fork {
+  width: 2rem; 
+  height: 25rem; 
+  background-color: #000;
+  left: 60rem; 
+  top: 26rem; 
+  transform: rotateZ(-55deg); 
+  z-index: 10; 
+}
