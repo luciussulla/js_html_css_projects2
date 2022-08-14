@@ -116,11 +116,9 @@
   .container {
     height: 100%; 
   }
-
   .cards-wrapper {
     flex-wrap: wrap; 
   }
-
   .card {
     margin: 50px; 
   }
