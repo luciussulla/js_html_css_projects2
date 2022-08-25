@@ -7,6 +7,7 @@
   width: 100%; 
   height: 100vh; 
   position: relative;
+  background-color: #000; /* for better fade effect */ 
 }
 
 .slide {
@@ -14,6 +15,7 @@
   height: 100%; 
   position: absolute; 
   background-color: #000;
+  transition: opacity 3s; /* obraz juz emieniony, ale opacity zwieksza sie przez caly czas jak on jest widoczny */ 
 }
 
 .slide img {
@@ -21,6 +23,10 @@
   height: inherit; 
   object-fit: cover;
   opacity: .6; 
+}
+
+.arrows-visibility {
+  opacity: 0; 
 }
 
 .control {
@@ -35,6 +41,12 @@
   display: flex; 
   justify-content: center;
   align-items: center; 
+
+  transition: opacity .5s linear; 
+}
+
+.control:hover {
+  opacity: 1; 
 }
 
 .left-arrow {
