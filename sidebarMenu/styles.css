@@ -31,20 +31,35 @@ html {
   position: fixed;
   padding: 1.5rem 1rem;
   box-sizing: border-box;
+
+  left: -15vw; 
+  z-index: 100; 
+
+  transition: left .2s; 
+}
+
+.open-sidebar .sidebar {
+  left: 0; 
 }
 
 /* HAMBURGER MENU */ 
-
 .hamburger-menu {
   width: 3.5rem; 
   height: 3.5rem; 
-  background-color: #fff;
+  background-color: var(--main-bg-color); 
   position: absolute; 
   top: 0; 
-  right: 0; 
+  right: -3.5rem; 
+  border-bottom-right-radius: 20%; 
 
   padding: .5rem; 
   box-sizing: border-box;
+
+  transition: right .3s .3s;
+}
+
+.open-sidebar .hamburger-menu {
+  right: 0rem; 
 }
 
 .line {
@@ -72,16 +87,16 @@ html {
 }
 
 /* burdger effects */ 
-.change .line-1 {
+.open-sidebar .line-1 {
   top: 2.4rem; 
   transform: rotate(-40deg) translateY(.3rem); 
 }
 
-.change .line-2 {
+.open-sidebar .line-2 {
   opacity: 0; 
 }
 
-.change .line-3 {
+.open-sidebar .line-3 {
   top: 1.2rem; 
   transform: rotate(40deg) translateY(-.3rem); 
 }
@@ -121,7 +136,6 @@ html {
   margin: 2rem 0 1rem 0; 
   display: flex; 
   align-items: center; 
-  border: 1px solid red;
 }
 
 .search-input {
@@ -162,7 +176,7 @@ html {
   display: flex; 
   align-items: center;
   color: var(--text-color); 
-  border: 1px solid blue; 
+  /* border: 1px solid blue;  */
 }
 
 .nav-link-text {
@@ -194,8 +208,8 @@ html {
   margin-right: 2.5rem; 
   font-size: 1.6rem; 
 }
-/* DROP DOWN MENUS */ 
 
+/* DROP DOWN MENUS */ 
 .sub-nav-list {
   width: 90%; 
   margin-left: auto; 
@@ -278,7 +292,14 @@ html {
 .main-section {
   width: 85vw; 
   position: relative; 
-  left: 15vw;  
+  left: 0vw; 
+  width: 100vw;  
+  transition: all .2s; 
+}
+
+.open-sidebar .main-section {
+  left: 15vw; 
+  width: 85vw; 
 }
 
 .header {
@@ -286,7 +307,7 @@ html {
   height: 100vh; 
   background: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.5)), url(images/bg.png) center no-repeat;
   background-size: cover;
-  border: 1px solid red; 
+  /* border: 1px solid red;  */
 }
 
 .heading {
