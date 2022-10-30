@@ -93,7 +93,6 @@ body {
   left: calc(50% - 3rem);
 }
 
-
 .ball-1, .ball-2 {
   transform: rotateY(-90deg);  
   animation: ballAnim 2s infinite linear;
