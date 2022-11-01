@@ -58,13 +58,15 @@ html {
 .dropdown {
   margin-top: 1rem; 
   /* background-color: #efefef; */
-
+  transform: translateX(10%);
   position: relative; 
   z-index: 100;
+
   opacity: 0; 
   visibility: hidden; 
   height: 0px; 
-  transition: all .3s; 
+
+  transition: all 1s; 
   border: 1px solid green; 
 }
 
@@ -72,6 +74,8 @@ html {
   opacity: 1;
   visibility: visible;  
   height: auto; 
+  transform: translateX(0%);
+  transition: all .1s .2s; 
 }
 
 .dropdown-item {
@@ -96,26 +100,27 @@ html {
 }
 
 /* BG element */ 
-
 .dropdown-bg {
   /* width: 40rem; 
   height: 60rem;  */
-  background-color: rgba(243, 243, 243, .94);
+  background-color: rgba(223, 223, 223, .94);
   border-radius: .3rem;
   box-shadow: 0 .5rem 1rem #757575; 
-  position: absolute; 
+  position: absolute;  
   /* magic */ 
   opacity: 0; 
   visibility: hidden; 
+  transition: all .3s;
 }
 
+/* the little pointer */ 
 .dropdown-bg:before {
   content: ''; 
   position: absolute; 
   border-left: 1rem solid transparent; 
   border-right: 1rem solid transparent; 
-  border-bottom: 1rem solid rgba(243, 243, 243, .94);
-
+  border-bottom: 1rem solid rgba(223, 223, 223, .94);
+  
   top: 0; 
   left: 50%; 
   transform: translate(-50%, -100%); 
