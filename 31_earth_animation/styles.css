@@ -35,7 +35,10 @@ body {
   height: 100%; 
   z-index: 10; 
   border-radius: 50%; 
-  box-shadow: -1rem 1rem 2rem #444, 2rem 2rem #444, inset 8rem 0 5rem #000, inset -1rem 1rem 2rem #c9c3c3; 
+  box-shadow: -1rem 1rem 2rem #444,
+              1rem 1rem 2rem#444,
+              inset 1rem 1rem 3rem #c9c3c3,
+              inset -1rem 1rem 3rem #efefef;  
 } 
 
 .earth {
