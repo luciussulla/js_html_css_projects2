@@ -34,8 +34,6 @@ reset.addEventListener('click', ()=> {
     div.innerHTML = '00';   
   }); 
 
-
-
 }); 
 
 }, 1000); 
