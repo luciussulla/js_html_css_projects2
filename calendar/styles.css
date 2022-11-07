@@ -97,6 +97,7 @@ html {
   justify-content: center;
   align-items: center;
   text-shadow: 0 .3rem .5rem rgba(0,0,0,.4);
+  transition: background-color .2s; 
 }
 
 .days div:hover:not(.today) {
@@ -114,4 +115,3 @@ html {
 .today {
   background-color: #167e56;
 }
-
