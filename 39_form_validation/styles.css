@@ -1,0 +1,154 @@
+*{
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%; 
+  height: 100vh; 
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  position: absolute; 
+  top: 5rem; 
+  font-size: 7rem; 
+  color: #f03535; 
+  letter-spacing: 1rem;
+  text-shadow: .2rem .2rem .5rem #aaa;
+}
+
+.heading span {
+  position: relative; 
+}
+
+.heading-span-1 {
+  z-index: 10; 
+}
+
+.heading-span-2::after {
+  content: ""; 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #fff;
+  right: -100%; 
+  transition: right .6s; 
+}
+
+.change .heading-span-2::after {
+  right: 100%; 
+}
+
+.buttons {
+  position: absolute; 
+  top: 5rem; 
+  left: 5rem; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.buttons button {
+  width: 10rem; 
+  height: 4rem;
+  /* background-color: #fff; */
+  font-size: 2rem; 
+  color: #f03535; 
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  border: none; 
+  box-shadow: .3rem .3rem .8rem #eee;
+  margin: 1rem 0; 
+  cursor: pointer; 
+  transition: background-color .3s; 
+}
+
+.signin-btn {
+  background-color: #e7e7e7;
+}
+
+.signup-btn {
+  background-color: #fff;
+}
+
+.change .signup-btn {
+  background-color: #e7e7e7;
+}
+
+.change .signin-btn {
+  background-color: #fff;
+}
+
+.form {
+  display: flex; 
+  flex-direction: column;
+  z-index: 100; 
+}
+
+.form-input-wrapper {
+  margin: 1.5rem 0; 
+  box-shadow: .5rem .5rem .5rem #eee;
+  border-radius: 5rem;
+}
+
+.form input {
+  width: 50rem; 
+  height: 5rem; 
+  background-color: #fff;
+  font-size: 1.7rem; 
+  padding: 0 2rem; 
+  letter-spacing: .2rem;
+  border: none; 
+  border-radius: 5rem;
+  transition: box-shadow .3s; 
+}
+
+.form-input {
+  box-shadow: inset .3rem .3rem .5rem #eee; 
+  color: #888;  
+}
+
+.form-input:focus {
+  box-shadow: inset .5rem .5rem 1rem #eee;
+}
+
+.message {
+  display: none; 
+}
+
+.form-btn {
+  box-shadow: .5rem .5rem 1rem #ddd; 
+  color: #f03535; 
+  margin: 2rem 0; 
+  letter-spacing: .2rem;
+  font-weight: bold;
+  cursor: pointer; 
+}
+
+.message {
+  display: none; 
+}
+
+.form-btn:hover {
+  box-shadow: .5rem .5rem 2rem #ddd;
+}
+
+.form-bg {
+  position: absolute; 
+  width: 65rem; 
+  height: 65rem; 
+  box-shadow: 1.5rem 1.5rem 1.5rem #ddd;
+  transform: rotate(45deg); 
+}
+
+
