@@ -99,6 +99,24 @@ html {
   margin: 1.5rem 0; 
   box-shadow: .5rem .5rem .5rem #eee;
   border-radius: 5rem;
+
+  position: relative; 
+}
+
+.form-input-wrapper:nth-child(1), 
+.form-input-wrapper:nth-child(4)
+{
+  visibility: hidden;
+  opacity: 0; 
+  transition: all .3s; 
+}
+
+.change .form-input-wrapper:nth-child(1), 
+.change .form-input-wrapper:nth-child(4)
+{
+  visibility: visible;
+  opacity: 1; 
+  transition: all .3s .3s; 
 }
 
 .form input {
@@ -110,7 +128,6 @@ html {
   letter-spacing: .2rem;
   border: none; 
   border-radius: 5rem;
-  transition: box-shadow .3s; 
 }
 
 .form-input {
@@ -123,8 +140,27 @@ html {
 }
 
 .message {
-  display: none; 
+  position: absolute; 
+  left: 2rem; 
+  font-size: 1.3rem; 
+  letter-spacing: .2rem;
+  margin-top: 1rem; 
+  color: #f55e5e; 
+
+  visibility: hidden;
+  opacity: 0; 
+  transition: opacity .3s; 
 }
+
+.error .message {
+  visibility: visible;
+  opacity: 1; 
+}
+
+.success .form-input {
+  border: .1rem solid #46e75e;
+}
+
 
 .form-btn {
   box-shadow: .5rem .5rem 1rem #ddd; 
@@ -133,10 +169,15 @@ html {
   letter-spacing: .2rem;
   font-weight: bold;
   cursor: pointer; 
+  position: relative; 
+
+  top: -8.2rem; 
+  transition: top .3s .3s, box-shadow .3s; 
 }
 
-.message {
-  display: none; 
+.change .form-btn {
+  top: 1rem; 
+  transition: top .3s .3s, box-shadow .3s; 
 }
 
 .form-btn:hover {
@@ -151,4 +192,59 @@ html {
   transform: rotate(45deg); 
 }
 
+/* Responsive */ 
+
+@media(max-width: 1400px) {
+  .form-bg {
+    transform: rotate(0);
+    height: 55rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .heading {
+    font-size: 5rem; 
+  }
+
+  .form-bg {
+    width: 55rem;
+    height: 50rem; 
+    margin-bottom: 10rem; 
+  }
+
+  .form input {
+    width: 40rem; 
+  }
+}
+
+@media(max-width: 700px) {
+  html {
+    font-size: 55%; 
+  }
+
+  .heading {
+    font-size: 4rem; 
+    top: 2rem; 
+  }
+
+  .buttons {
+    left: 3rem; 
+    top: 2rem; 
+  }
+
+  .buttons button {
+    width: 7rem; 
+    height: 3rem; 
+    font-size: 1.67rem; 
+  }
+
+  .form-bg {
+    height: 45rem; 
+    width: 45rem; 
+  }
+
+  .form input {
+    width: 35rem; 
+  }
+}
 
