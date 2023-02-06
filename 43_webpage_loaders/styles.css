@@ -1,0 +1,204 @@
+* {
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+.container {
+  width: 100%; 
+  height: 100vh; 
+
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #efefef;
+}
+
+.loader1 {
+  width: 20rem; 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.dit {
+  height: 30px; 
+  width: 30px; 
+  background-color: #852a3a;
+  border-radius: 50%;
+  margin: 1.6rem;  
+  opacity: .6; 
+  animation: loader1 2s infinite; 
+}
+
+.dit:nth-child(1) {
+  animation-delay: .3s;
+}
+
+.dit:nth-child(2) {
+  animation-delay: .5s;
+}
+
+.dit:nth-child(3) {
+  animation-delay: .6s;
+}
+
+.dit:nth-child(4) {
+  animation-delay: .4s;
+}
+
+.dit:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.dit:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.dit:nth-child(7) {
+  animation-delay: .4s;
+}
+
+.dit:nth-child(8) {
+  animation-delay: .3s;
+}
+
+@keyframes loader1 {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.5); 
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1); 
+    opacity: 0.6; 
+  }
+}
+
+/* Loader 2 */ 
+
+.loader2 {
+  width: 25rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.line {
+  width: 1.5rem; 
+  height: 5rem; 
+  background-color: #4169e1;
+  border-radius: 1rem; 
+
+  animation: animateLoader2 0.5s infinite;
+}
+
+.line:nth-child(1) {
+  animation-delay: .4s;
+}
+.line:nth-child(2) {
+  animation-delay: .3s;
+}
+.line:nth-child(3) {
+  animation-delay: .6s;
+}
+.line:nth-child(4) {
+  animation-delay: .3s;
+}
+.line:nth-child(5) {
+  animation-delay: .5s;
+}
+
+@keyframes animateLoader2 {
+  0% {
+    height: 5rem; 
+  }
+
+  50% {
+    height: 18rem; 
+  }
+
+  100% { 
+    height: 5rem; 
+  }
+}
+
+/* loader 3 */ 
+
+.loader3 {
+  width: 40rem; 
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.circle {
+  width: 4rem; 
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative; 
+}
+
+/* .circle:nth-child(1)::before {
+  background-color: red;
+}
+
+.circle:nth-child(2)::before {
+  background-color: green;
+}
+
+.circle:nth-child(3)::before {
+  background-color: blue;
+}
+
+.circle:nth-child(4)::before {
+  background-color: yellow;
+} */
+
+.circle:nth-child(1)::before {
+  background-color: red;
+}
+
+.circle:nth-child(2)::before {
+  background-color: green;
+}
+
+.circle:nth-child(3)::before {
+  background-color: blue;
+}
+
+.circle:nth-child(4)::before {
+  background-color: yellow;
+}
+
+
+.circle::before {
+  content: ""; 
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  border-radius: 50%;
+  opacity: .5;
+  animation: load3 2s infinite; 
+}
+
+@keyframes load3 {
+  0% {
+    transform: scale(1); 
+  }
+
+  50%, 75% {
+    transform: scale(2.5); 
+  }
+
+  80%, 100% {
+    opacity: 0; 
+  }
+}
