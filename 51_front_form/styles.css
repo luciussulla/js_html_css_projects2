@@ -197,4 +197,45 @@
 .signup-form button {
   display: block; 
   margin-top: 80px; 
+  width: 150px; 
+  padding: 8px 5px; 
+  background-color: transparent;
+  color: #fff; 
+  border: 2px solid #fff; 
+  border-radius: 50px; 
+  outline: none;
+  font-size: 15px; 
+  letter-spacing: 1px; 
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.x-btn {
+  position: absolute; 
+  bottom: -6%; 
+  right: 1%; 
+  font-size: 23px; 
+  font-weight: bold; 
+  color: #262626; 
+  cursor: pointer; 
+}
+
+.header {
+  width: 50%; 
+  background: linear-gradient(to top, rgba(0,0,0,.4), rgba(0,0,0,.2)), url(images/bg2.jpeg) center no-repeat;
+  background-size: cover; 
+  box-shadow: -10px 0 30px rgba(0,0,0,.3); 
+  position: relative; 
+}
+
+.header h1 {
+  position: absolute; 
+  top: 15%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  text-align: center; 
+  color: #fff; 
+  text-transform: uppercase;
+  font-size: 40px; 
+  letter-spacing: 1px;
 }
