@@ -9,7 +9,7 @@
   height: 100vh; 
   background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.7)), url(images/b1.jpeg) center no-repeat; 
   background-size: cover; 
-  background-color: #cc683c;
+  /* background-color: #cc683c; */
   position: relative; 
 }
 
@@ -27,7 +27,7 @@
 
   transform: translate(-50%, -50%); 
 
-  display: none; 
+  /* display: none;  */
 }
 
 .banner-btn {
@@ -100,6 +100,8 @@
 /* form container */ 
 .form-container {
   /* display: none; */
+  opacity: 0; 
+  visibility: hidden; 
 
   width: 800px; 
   height: 600x; 
@@ -109,6 +111,8 @@
   transform: translate(-50%, -50%); 
   box-shadow: 0 20px 50px rgba(0,0,0,.4);
   display: flex; 
+
+  transition: opacity .5s; 
 }
 
 .signup-form {
